@@ -6,6 +6,8 @@ This repo gives you **5 tools** (reusable prompt systems) and a set of **playboo
 
 Everything here is copy-paste ready. Drop the prompts into Claude, ChatGPT, Gemini, or whatever you use. The point isn't the tool — it's the *workflow*.
 
+**🌐 Browsable site:** https://baradaran.github.io/pm-ai-toolkit/
+
 ---
 
 ## What PMs should actually use AI for (the argument)
@@ -55,6 +57,14 @@ Tools are the *what*. Playbooks are the *when and how* — step-by-step workflow
 - [Prioritization (RICE + AI sparring)](playbooks/prioritization.md)
 
 See [playbooks/README.md](playbooks/README.md) for how playbooks work.
+
+## Reusable prompt building blocks
+
+The pattern is always **persona + context + task + guardrails**. The [prompts/](prompts/) folder holds the building blocks:
+
+- [System prompts](prompts/system-prompts.md) — personas (Pragmatic PM, Research Analyst, Skeptical Reviewer, Comms Editor).
+- [Guardrail snippets](prompts/guardrail-snippets.md) — paste-anywhere rules to stop hallucination and force citations.
+- [Context blocks](prompts/context-blocks.md) — fill-once templates for your product, areas, and audiences.
 
 ---
 

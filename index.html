@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM AI Toolkit — practical AI for product managers</title>
+<meta name="description" content="An opinionated, copy-paste toolkit for product managers using AI: 5 core tools and a set of playbooks for specs, research synthesis, feedback triage, competitive analysis, and stakeholder comms.">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2a3340;
+    --text:#e6edf3; --muted:#9aa7b4; --accent:#5b9dff; --accent2:#7ee787;
+    --radius:14px; --maxw:1040px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+  header.hero{
+    text-align:center; padding:80px 20px 56px;
+    background:radial-gradient(900px 400px at 50% -10%, rgba(91,157,255,.18), transparent 70%);
+    border-bottom:1px solid var(--border);
+  }
+  .badge{display:inline-block; font-size:13px; color:var(--accent2); border:1px solid var(--border);
+    background:var(--panel); padding:5px 12px; border-radius:999px; margin-bottom:22px; letter-spacing:.3px}
+  h1{font-size:clamp(32px,5vw,52px); line-height:1.1; margin:0 0 16px; letter-spacing:-1px}
+  .sub{font-size:clamp(17px,2.2vw,20px); color:var(--muted); max-width:680px; margin:0 auto 32px}
+  .cta{display:inline-flex; gap:10px; flex-wrap:wrap; justify-content:center}
+  .btn{display:inline-block; padding:12px 22px; border-radius:10px; font-weight:600; font-size:15px}
+  .btn.primary{background:var(--accent); color:#06121f}
+  .btn.primary:hover{background:#7eb2ff; text-decoration:none}
+  .btn.ghost{border:1px solid var(--border); color:var(--text); background:var(--panel)}
+  .btn.ghost:hover{border-color:var(--accent); text-decoration:none}
+
+  section{padding:56px 0}
+  h2{font-size:28px; margin:0 0 8px; letter-spacing:-.5px}
+  .lead{color:var(--muted); margin:0 0 28px; max-width:720px}
+
+  .argue{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:28px}
+  .argue h2{margin-top:0}
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:18px}
+  .cols .good{border-left:3px solid var(--accent2); padding-left:16px}
+  .cols .bad{border-left:3px solid #ff7b72; padding-left:16px}
+  .cols h3{margin:0 0 8px; font-size:16px}
+  .cols ul{margin:0; padding-left:18px; color:var(--muted)}
+  .cols li{margin-bottom:6px}
+  .rule{margin-top:20px; padding:14px 16px; background:var(--panel2); border-radius:10px; font-size:15px}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px}
+  .card{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+    padding:22px; transition:transform .12s ease, border-color .12s ease; display:block; color:inherit}
+  .card:hover{transform:translateY(-3px); border-color:var(--accent); text-decoration:none}
+  .card .n{font-size:13px; color:var(--accent); font-weight:700; letter-spacing:.5px}
+  .card h3{margin:8px 0 8px; font-size:18px}
+  .card p{margin:0; color:var(--muted); font-size:14.5px}
+
+  .play{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px}
+  .play a{background:var(--panel2); border:1px solid var(--border); border-radius:12px; padding:18px; color:inherit}
+  .play a:hover{border-color:var(--accent2); text-decoration:none}
+  .play h3{margin:0 0 6px; font-size:16px}
+  .play span{color:var(--muted); font-size:13.5px}
+
+  .now{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px}
+  .now div{background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px}
+  .now .when{font-size:13px; color:var(--accent2); font-weight:700; text-transform:uppercase; letter-spacing:.5px}
+  .now h3{margin:8px 0 4px; font-size:16px}
+  .now p{margin:0; color:var(--muted); font-size:14px}
+
+  footer{border-top:1px solid var(--border); padding:36px 20px; text-align:center; color:var(--muted); font-size:14px}
+  @media(max-width:680px){.cols,.now{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Open source · MIT · for product managers</span>
+    <h1>PM AI Toolkit</h1>
+    <p class="sub">A practical, opinionated toolkit for product managers who want to actually <em>use</em> AI in the daily job — not chase hype. Copy-paste tools and playbooks, no fluff.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/baradaran/pm-ai-toolkit">View on GitHub</a>
+      <a class="btn ghost" href="#tools">See the 5 tools</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <div class="argue">
+      <h2>What PMs should actually use AI for</h2>
+      <p class="lead">There's a lot of noise about "AI for PMs." Here's the honest take: use AI to compress the time between <strong>information and insight</strong>, and between <strong>insight and first draft</strong>. Keep the decisions.</p>
+      <div class="cols">
+        <div class="good">
+          <h3>✅ Delegate this</h3>
+          <ul>
+            <li>Summarizing &amp; clustering (tickets, interviews, threads)</li>
+            <li>First drafts — PRDs, updates, release notes</li>
+            <li>Triage, dedupe, severity-scoring at scale</li>
+            <li>Reframing &amp; pressure-testing your thinking</li>
+          </ul>
+        </div>
+        <div class="bad">
+          <h3>⛔ Keep this human</h3>
+          <ul>
+            <li>Deciding <em>what</em> to build and <em>why</em></li>
+            <li>Real customer empathy &amp; context only you have</li>
+            <li>Final numbers, commitments, anything shipped</li>
+            <li>Prioritization — it's judgment + strategy + politics</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rule"><strong>Rule of thumb:</strong> AI drafts; you decide. If the output leaves your hands, you reviewed it first.</div>
+    </div>
+  </section>
+
+  <section id="now">
+    <h2>What to use right now</h2>
+    <p class="lead">If you adopt nothing else, adopt these — in this order.</p>
+    <div class="now">
+      <div><div class="when">This week</div><h3>Feedback Triage</h3><p>Pays for itself immediately. Turn the inbox into a ranked, routed queue.</p></div>
+      <div><div class="when">This month</div><h3>Research Synthesizer</h3><p>Stop hand-summarizing interviews. Highest ROI of any AI use for PMs.</p></div>
+      <div><div class="when">Next spec</div><h3>PRD &amp; Spec Writer</h3><p>Blank page → structured 70% draft. You add the judgment.</p></div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <h2>The 5 tools</h2>
+    <p class="lead">Deliberately the things PMs actually use — not novelties. Each is a copy-paste prompt system with built-in guardrails and a clear "what to keep human" note.</p>
+    <div class="grid">
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/tools/01-prd-and-spec-writer.md">
+        <div class="n">TOOL 01</div><h3>PRD &amp; Spec Writer</h3>
+        <p>Rough idea → structured PRD, one-pager, or RFC. Refuses to invent metrics.</p></a>
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/tools/02-research-synthesizer.md">
+        <div class="n">TOOL 02</div><h3>Research Synthesizer</h3>
+        <p>Interviews, surveys, tickets → themes, verbatim quotes, opportunities.</p></a>
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/tools/03-feedback-triage.md">
+        <div class="n">TOOL 03</div><h3>Feedback Triage</h3>
+        <p>Classify, dedupe, severity-score, and route feedback at scale.</p></a>
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/tools/04-competitive-and-market-analysis.md">
+        <div class="n">TOOL 04</div><h3>Competitive Analysis</h3>
+        <p>Structured teardowns &amp; gap matrices — from data you supply, not AI's memory.</p></a>
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/tools/05-stakeholder-comms.md">
+        <div class="n">TOOL 05</div><h3>Stakeholder Comms</h3>
+        <p>Status updates, exec summaries, release notes, "explain it to X."</p></a>
+    </div>
+  </section>
+
+  <section id="playbooks">
+    <h2>The playbooks</h2>
+    <p class="lead">Tools are the <em>what</em>. Playbooks are the <em>when &amp; how</em> — repeatable workflows that chain tools and mark every human-decision step.</p>
+    <div class="play">
+      <a href="https://github.com/baradaran/pm-ai-toolkit/blob/main/playbooks/weekly-feedback-triage.md">
+        <h3>Weekly Feedback Triage</h3><span>~40 min replaces a half-day · weekly cadence</span></a>
+      <a href="https://github.com/baradaran/pm-ai-toolkit/blob/main/playbooks/discovery-to-prd.md">
+        <h3>Discovery → PRD</h3><span>Every requirement traceable to a real user quote</span></a>
+      <a href="https://github.com/baradaran/pm-ai-toolkit/blob/main/playbooks/launch-comms.md">
+        <h3>Launch Communications</h3><span>One source of truth → all audience versions</span></a>
+      <a href="https://github.com/baradaran/pm-ai-toolkit/blob/main/playbooks/prioritization.md">
+        <h3>Prioritization (RICE + AI sparring)</h3><span>AI stress-tests your ranking — it never sets it</span></a>
+    </div>
+  </section>
+
+  <section id="prompts">
+    <h2>Reusable prompt building blocks</h2>
+    <p class="lead">The pattern: <strong>persona + context + task + guardrails</strong>. Fill your context once, reuse everywhere.</p>
+    <div class="grid">
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/prompts/system-prompts.md">
+        <div class="n">SNIPPETS</div><h3>System prompts</h3><p>Personas: Pragmatic PM, Research Analyst, Skeptical Reviewer, Comms Editor.</p></a>
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/prompts/guardrail-snippets.md">
+        <div class="n">SNIPPETS</div><h3>Guardrail snippets</h3><p>Paste-anywhere rules to stop hallucination and force citations.</p></a>
+      <a class="card" href="https://github.com/baradaran/pm-ai-toolkit/blob/main/prompts/context-blocks.md">
+        <div class="n">SNIPPETS</div><h3>Context blocks</h3><p>Fill-once templates for your product, areas, and audiences.</p></a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>PM AI Toolkit · MIT licensed · Contributions welcome on <a href="https://github.com/baradaran/pm-ai-toolkit">GitHub</a>.</p>
+    <p>AI drafts; you decide.</p>
+  </div>
+</footer>
+</body>
+</html>
