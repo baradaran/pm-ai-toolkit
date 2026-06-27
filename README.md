@@ -2,7 +2,7 @@
 
 > A practical, opinionated toolkit for product managers who want to actually *use* AI in the daily job — not chase hype.
 
-This repo gives you **5 tools** (reusable prompt systems) and a set of **playbooks** for the work PMs do every week: writing specs, making sense of research, triaging feedback, sizing up competitors, and keeping stakeholders aligned.
+This repo gives you **6 tools** (reusable prompt systems), a curated **directory of the real products worth buying**, and a set of **playbooks** for the work PMs do every week: writing specs, making sense of research, triaging feedback, sizing up competitors, prototyping, and keeping stakeholders aligned.
 
 Everything here is copy-paste ready. Drop the prompts into Claude, ChatGPT, Gemini, or whatever you use. The point isn't the tool — it's the *workflow*.
 
@@ -39,13 +39,18 @@ There's a lot of noise about "AI for PMs." Most of it is either toy demos or too
 
 ---
 
-## The 5 tools
+## The tools
 
 1. **[PRD & Spec Writer](tools/01-prd-and-spec-writer.md)** — turn a rough idea into a structured PRD, one-pager, or RFC.
 2. **[Research Synthesizer](tools/02-research-synthesizer.md)** — interviews, surveys, reviews, and tickets → themes, quotes, and opportunities.
 3. **[Feedback Triage](tools/03-feedback-triage.md)** — classify, dedupe, severity-score, and route incoming feedback at scale.
 4. **[Competitive & Market Analysis](tools/04-competitive-and-market-analysis.md)** — structured teardowns, positioning, and gap analysis.
 5. **[Stakeholder Comms](tools/05-stakeholder-comms.md)** — status updates, exec summaries, release notes, and the "explain it to X" rewrite.
+6. **[AI Prototyping](tools/06-ai-prototyping.md)** — turn a spec into a clickable prototype to validate before you build (v0 / Lovable / Replit).
+
+## Which actual products to buy
+
+This repo is vendor-neutral — the prompts work with any model. But if you're asking "what should I actually pay for?", see **[The AI Tool Landscape for PMs (2026)](tools-landscape.md)** — an opinionated directory of the real named tools (Perplexity, NotebookLM, Granola, Productboard, v0…) mapped to each job, based on what PMs actually use now.
 
 ## The playbooks
 
