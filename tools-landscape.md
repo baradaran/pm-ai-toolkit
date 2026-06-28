@@ -1,6 +1,10 @@
 # The AI Tool Landscape for PMs (2026)
 
+![Last reviewed](https://img.shields.io/badge/last%20reviewed-June%202026-blue) ![Review cadence](https://img.shields.io/badge/review%20cadence-quarterly-brightgreen)
+
 > Opinionated, honest directory of the AI tools PMs actually reach for — organized by the job you're trying to do, not by vendor hype.
+
+> ⏳ **This page has a shelf life.** The AI tool market changes every quarter — products ship features, change pricing, get acquired, or fade. Treat tool *names* as a snapshot and **always verify current pricing/features before buying**. The *workflows* in this repo are the durable part; the vendor list is not. See [Maintenance](#maintenance) at the bottom.
 
 **The meta-advice everyone agrees on:** most PMs need **2–3 tools, not twelve.** Pick based on where your current workflow has the most friction. In a 2026 survey of ~1,750 product professionals, **63% said AI saves them 4+ hours every week** — but only when it's pointed at a real bottleneck.
 
@@ -87,6 +91,16 @@ Keep execution on track.
 3. **Only add a second tool once the first is a habit.** Tool sprawl is the failure mode.
 
 > The tools change every quarter. The *workflows* in this repo don't — that's the point. Bring any model; keep the playbook.
+
+---
+
+## Maintenance
+
+- **Last reviewed:** June 2026.
+- **Cadence:** review quarterly (next: ~September 2026). Tool landscapes go stale fast.
+- **What to check each review:** are the named tools still the leaders? pricing/feature changes? acquisitions or shutdowns? any new category PMs have adopted (last quarter it was AI prototyping)?
+- **What NOT to churn:** the job-to-be-done categories and the prompts/workflows in this repo. Those are stable by design — only the vendor names under each category should change.
+- Spot something out of date? [Open an issue or PR](https://github.com/baradaran/pm-ai-toolkit/issues) and bump the "last reviewed" badge at the top.
 
 ---
 
