@@ -14,18 +14,20 @@ Everything here is copy-paste ready. Drop the prompts into Claude, ChatGPT, Gemi
 
 There's a lot of noise about "AI for PMs." Most of it is either toy demos or tools that replace a step you didn't need help with. Here's the honest take.
 
-**AI is genuinely good at the parts of the PM job that are high-volume, language-heavy, and judgment-light:**
+> 📌 **Capability claims below are a snapshot — as of June 2026, based on the current generation of models and the latest industry reviews.** Where this section says AI is "weak at" something, that's an observation about today's tools, not a permanent law. Models improve fast; re-check before treating any limitation as fixed. (See the [tool landscape](tools-landscape.md) review cadence.) The *accountability* points — "you decide, you sign off" — stay true regardless of how good the models get.
+
+**As of this review, AI is genuinely good at the parts of the PM job that are high-volume, language-heavy, and judgment-light:**
 
 - **Summarizing and clustering** — turning 200 support tickets, 12 interview transcripts, or a noisy Slack thread into themes. This is the single highest-ROI use. Do this first.
 - **First drafts** — PRDs, one-pagers, release notes, status updates. AI gets you from blank page to 70%. You bring the 30% that's actually product judgment.
 - **Triage and routing** — labeling, deduping, and severity-scoring incoming feedback so you spend your attention on the 10% that matters.
 - **Reframing and pressure-testing** — "argue against this", "what would a skeptical exec ask", "what am I missing". AI as a sparring partner, not an oracle.
 
-**AI is bad at — and you should NOT delegate — the core of the job:**
+**As of this review (June 2026), AI is still weak at — and regardless of capability you should NOT delegate — the core of the job:**
 
-- Deciding *what* to build and *why* (prioritization is judgment + politics + strategy).
-- Anything requiring real customer empathy or context only you have.
-- Final numbers, commitments, or anything that ships to a customer without your review.
+- Deciding *what* to build and *why* (prioritization is judgment + politics + strategy). *This stays yours even as models get smarter — it's an accountability line, not a capability gap.*
+- Anything requiring real customer empathy or context only you have. *(Capability-dependent — today's models lack your context; revisit as tools gain memory/integrations.)*
+- Final numbers, commitments, or anything that ships to a customer without your review. *(Accountability — you sign off, full stop.)*
 
 **Rule of thumb:** Use AI to compress the time between *information* and *insight*, and between *insight* and *first draft*. Keep the decisions.
 

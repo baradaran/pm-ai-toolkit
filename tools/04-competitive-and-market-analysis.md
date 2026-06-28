@@ -4,7 +4,7 @@
 
 **Why it matters:** PMs are expected to "know the landscape" but rarely have time to do it rigorously. AI gives you structure and speed for the synthesis. It does **not** give you facts — so this tool leans hard on *you supplying the data* and the model *organizing* it.
 
-**What to keep human — and this one is critical:** AI will confidently hallucinate competitor features, pricing, and funding. **Never trust an LLM's recall of facts about specific companies.** Feed it real data you've gathered (their site, G2 reviews, pricing page) and have it structure that. Verify everything that ships.
+**What to keep human — and this one is critical:** *As of June 2026 (this review), and consistent with the latest reviews,* models without live, cited retrieval will confidently hallucinate competitor features, pricing, and funding. **Don't trust a model's unaided recall of facts about specific companies** — treat that as today's reality, not a permanent verdict (retrieval and grounding are improving quickly). Either way, the safe workflow is the same: feed it real data you've gathered (their site, G2 reviews, pricing page) and have it *structure* that, and verify everything that ships.
 
 ---
 
